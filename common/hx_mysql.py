@@ -6,7 +6,7 @@ from collections.abc import Iterable
 
 class RedisUtils:
     def connect_redis(self):
-        self.conn = redis.StrictRedis(host='9999.249', port=6379, db=0, decode_responses=True)
+        self.conn = redis.StrictRedis(host='1.10.99.249', port=8099, db=0, decode_responses=True)
 
     def get_keys(self, key):
         res = self.conn.keys(key)
@@ -91,7 +91,7 @@ class RedisUtils:
 
 class MysqlUtils:
     def connect_database(self, database='kkk'):
-        self.db = pymysql.connect(host='89999.202', user='root', password='kkkk', database=database)
+        self.db = pymysql.connect(host='10.122.202', user='root', password='kkkk', database=database)
 
     def get_db_data(self, sql):
         key_word = ['insert', 'truncate', 'drop', 'delete', 'update']
